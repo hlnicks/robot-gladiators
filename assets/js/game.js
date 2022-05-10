@@ -78,6 +78,7 @@ var startGame = function() {
     
             // let player know what round they're in
             window.alert("Welcome to Robot Gladiators! Round " + ( i + 1 ));
+        
     
             // pick new enemy to fight
             var pickedEnemyObj = enemyInfo[i];
@@ -166,7 +167,20 @@ var randomNumber = function(min, max) {
     return value;
 };
 
+// to set name
+var getPlayerName = function() {
+    var name = "";
+
+    while(name === "" || name === null) {
+        name = prompt("What is your robot's name?");
+    }
+
+    console.log("Your robot's name is " + name);
+    return name;
+};
+
 var playerInfo = {
+    name: getPlayerName(),
     name: window.prompt("What is your robot's name?"),
     health: 100,
     attack: 10,
