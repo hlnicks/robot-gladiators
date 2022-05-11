@@ -1,8 +1,15 @@
+// var fightOrSkip = function() {
+
+
+// }
+
 var fight = function(enemy) {
     while(playerInfo.health > 0 && enemy.health > 0) {
         
         // ask player if they want to fight or skip
         var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
+
+        // function
 
         // if skip, confirm and stop loop
         if(promptFight === "skip" || promptFight === "SKIP") {
@@ -16,8 +23,7 @@ var fight = function(enemy) {
                 
                 // subtract money from playerInfo.money for skipping
                 playerInfo.money = Math.max(0, playerInfo.money - 10);  
-                console.log("playerInfo.money", playerInfo.money);
-                break;
+
             }
         }
     
