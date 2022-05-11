@@ -81,8 +81,7 @@ var fight = function(enemy) {
   } // end of while loop
 }; // end of fight function
 
-
-
+// function to start a new game
 var startGame = function() {
   // reset player stats
   playerInfo.reset();
